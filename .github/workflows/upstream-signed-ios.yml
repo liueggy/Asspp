@@ -1,6 +1,7 @@
+# refresh workflows
 name: Upstream Signed iOS Build
 
-on:
+于:
   schedule:
     - cron: "*/30 * * * *"
   workflow_dispatch:
@@ -12,22 +13,22 @@ on:
         options:
           - upstream
           - fork
-        default: upstream
+        默认: upstream
       source_branch:
         description: "Branch name to build (e.g. main)"
         required: false
         type: string
-        default: main
+        默认: main
       source_repo:
         description: "Source repository when source_kind=upstream (owner/repo)"
         required: false
         type: string
-        default: Lakr233/Asspp
+        默认: Lakr233/Asspp
       force_build:
         description: "Force build even if release tag already exists"
         required: false
         type: boolean
-        default: true
+        默认: true
       upstream_ref:
         description: "Legacy override git ref (e.g. refs/heads/main)"
         required: false
